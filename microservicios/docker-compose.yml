@@ -1,0 +1,23 @@
+
+services:
+  servicio_a:
+    build: ./servicio_a
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=db-actividades.czbooez4f39o.us-east-1.rds.amazonaws.com
+      - DB_USER=admin
+      - DB_PASSWORD=admin123
+      - DB_NAME=sistema_clase
+    networks:
+      - red_interna
+
+  servicio_b:
+    build: ./servicio_b
+    # B no tiene puerto expuesto al mundo [cite: 54, 379]
+    networks:
+      - red_interna
+
+networks:
+  red_interna:
+    driver: bridge
