@@ -19,7 +19,7 @@ El servicio a solo recibe los datos del formulario de la pagina principal y los 
 
 Por medio de una peticion POST. En el codigo solo se uso el nombre del servicio "servicio_b:5001". Esto por el DNS interno de DOcker donde reconoce los nombres de los contenedores de la misma red y los conecta automaticamente.
 
-Tablas en la base de datos
+*Tablas en la base de datos*
 Tabla	Servicio dueño	Qué guarda
 productos	Servicio A	Nombre de la consola y el stock inicial.
 auditoria_stock	Servicio B	El historial de registros y confirmaciones de seguridad.
